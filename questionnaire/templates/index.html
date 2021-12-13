@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+  <!-- класс py-5 создает отступы сверху и снизу блока -->
+      <div class="container py-5">     
+        {% for question in questions %}
+          <p>{{ question.title }}</p>
+          {% if not forloop.last %}<hr>{% endif %}
+        {% endfor %}
+      </div>  
+{% endblock %}

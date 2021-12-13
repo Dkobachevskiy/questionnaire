@@ -1,0 +1,33 @@
+<!DOCTYPE html> <!-- Используется html 5 версии -->
+<html lang="ru"> 
+
+  <head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/static/img/logo.png" type="image">
+    <meta name="msapplication-TileColor" content="#000">
+    <meta name="theme-color" content="#ffffff">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+
+    <header>
+      {% include 'includes/header.html' %}
+    </header>
+
+    <main> 
+      {% block content %}
+        NO CONTENT
+      {% endblock %}
+    </main>        
+    
+    <footer class="border-top text-center py-3">
+      {% include 'includes/footer.html' %}
+    </footer>
+
+  </body>
+  
+</html>
